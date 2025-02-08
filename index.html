@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search App</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts link for Poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome CSS for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo-container">
+                <!-- Logo image -->
+                <img src="logo.png" alt="ScreenSizzle Logo" class="logo">
+                <!-- App name -->
+                <h1>ScreenSizzle</h1>
+            </div>
+        </div>
+        <nav class="genre-nav">
+            <!-- Genre navigation -->
+            <h2><i class="fas fa-film"></i> All Genres</h2>
+            <!-- Added heading with icon -->
+            <ul id="genreList">
+                <!-- Genre list will be populated by JavaScript -->
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="search-card">
+            <!-- Movie search card -->
+            <h2>Movie Search</h2>
+            <div class="search-controls">
+                <!-- Input field for movie title -->
+                <input type="text" id="movieTitle" placeholder="Enter a movie title..." class="search-input"
+                    onkeydown="handleEnter(event)">
+                <!-- Search button -->
+                <button onclick="searchMovies()">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+            <!-- Error message display -->
+            <div id="error" class="error"></div>
+        </div>
+        <!-- Loading spinner display -->
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Searching for movies...</p>
+        </div>
+        <!-- Movie grid to display search results -->
+        <div id="movieGrid" class="movie-grid"></div>
+    </div>
+    <footer>
+        <!-- Footer section -->
+        <p>&copy; ScreenSizzle App 2025. All rights reserved.</p>
+    </footer>
+    <!-- Link to API script -->
+    <script src="api.js"></script>
+    <!-- Link to main application script -->
+    <script src="app.js"></script>
+</body>
+
+</html>
