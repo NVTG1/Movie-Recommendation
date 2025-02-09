@@ -30,7 +30,6 @@
         <nav class="genre-nav">
             <!-- Genre navigation -->
             <h2><i class="fas fa-film"></i> All Genres</h2>
-            <!-- Added heading with icon -->
             <ul id="genreList">
                 <!-- Genre list will be populated by JavaScript -->
             </ul>
@@ -41,10 +40,8 @@
             <!-- Movie search card -->
             <h2>Movie Search</h2>
             <div class="search-controls">
-                <!-- Input field for movie title -->
                 <input type="text" id="movieTitle" placeholder="Enter a movie title..." class="search-input"
                     onkeydown="handleEnter(event)">
-                <!-- Search button -->
                 <button onclick="searchMovies()">
                     <i class="fas fa-search"></i> Search
                 </button>
@@ -61,12 +58,10 @@
         <div id="movieGrid" class="movie-grid"></div>
     </div>
     <footer>
-        <!-- Footer section -->
         <p>&copy; ScreenSizzle App 2025. All rights reserved.</p>
     </footer>
-    <!-- Link to API script -->
+    
     <script src="api.js"></script>
-    <!-- Link to main application script -->
     <script src="app.js"></script>
 </body>
 

@@ -1,205 +1,205 @@
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif; /* Sets the font for the entire body */
-    color: #fff; /* Sets the text color to white */
-    margin: 0; /* Resets default margin */
-    padding: 0; /* Resets default padding */
-    line-height: 1.6; /* Sets the line height for better readability */
-    -webkit-font-smoothing: antialiased; /* Improves font rendering for webkit browsers */
-    -moz-osx-font-smoothing: grayscale; /* Improves font rendering for MacOS Firefox */
+    font-family: 'Poppins', sans-serif; 
+    color: #fff; 
+    margin: 0; 
+    padding: 0; 
+    line-height: 1.6; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale; 
     background-image: url('background.jpg'); /* Sets the background image */
-    background-size: cover; /* Ensures the background covers the entire element */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the background image from repeating */
-    background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
 }
 
 /* Overlay to improve text readability against the background */
 body::before {
-    content: ""; /* Required for pseudo-elements */
-    position: fixed; /* Positions the overlay relative to the viewport */
-    top: 0; /* Aligns the overlay to the top of the viewport */
-    left: 0; /* Aligns the overlay to the left of the viewport */
-    width: 100%; /* Makes the overlay cover the full width of the viewport */
-    height: 100%; /* Makes the overlay cover the full height of the viewport */
-    background-color: rgba(0, 0, 0, 0.6); /* Sets a semi-transparent black background */
-    z-index: -1; /* Ensures the overlay is behind other content */
+    content: ""; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: -1; 
 }
 
 /* Header Styles */
 header {
-    background: rgba(102, 126, 234, 0.4); /* Sets a semi-transparent purple background */
-    color: #fff; /* Sets the text color to white */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    position: relative; /* Establishes a positioning context for child elements */
-    overflow: hidden; /* Hides any overflowing content */
-    backdrop-filter: blur(5px); /* Applies a blur effect to the background */
+    background: rgba(102, 126, 234, 0.4); 
+    color: #fff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    position: relative; 
+    overflow: hidden; 
+    backdrop-filter: blur(5px); 
 }
 
 /* Top part of the header (logo and title) */
 .header-top {
-    background: transparent; /* Makes the background transparent */
-    padding: 1rem 0; /* Adds padding at the top and bottom */
-    text-align: center; /* Centers the text */
+    background: transparent; 
+    padding: 1rem 0; 
+    text-align: center; 
 }
 
 /* Container for the logo and the title */
 .logo-container {
-    display: flex; /* Uses flexbox for layout */
-    align-items: center; /* Vertically aligns items */
-    justify-content: center; /* Horizontally aligns items */
-    margin: 0; /* Resets default margin */
-    padding: 0; /* Resets default padding */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin: 0; 
+    padding: 0; 
 }
 
 /* Logo image style */
 .logo {
-    height: 60px; /* Sets the height of the logo */
-    margin-right: 15px; /* Adds some space to the right of the logo */
-    display: block; /* Makes the logo a block-level element */
-    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-    padding: 0; /* Resets default padding */
-    border: none; /* Removes any border */
+    height: 60px; 
+    margin-right: 15px;
+    display: block;
+    box-sizing: border-box; 
+    padding: 0; 
+    border: none; 
 }
 
 /* Style for the header title */
 .header-top h1 {
-    font-size: 3rem; /* Sets the font size */
-    margin-bottom: 0; /* Removes bottom margin */
-    letter-spacing: 1.5px; /* Adds spacing between letters */
-    color: #fff; /* Sets the text color to white */
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Adds a text shadow */
-    font-weight: 600; /* Sets a bold font weight */
-    margin: 0; /* Resets default margin */
-    padding: 0; /* Resets default padding */
+    font-size: 3rem; 
+    margin-bottom: 0; 
+    letter-spacing: 1.5px; 
+    color: #fff; 
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+    font-weight: 600; 
+    margin: 0; 
+    padding: 0; 
 }
 
 /* Genre navigation styles */
 .genre-nav {
-    background-color: rgba(0, 0, 0, 0.1); /* Sets a semi-transparent black background */
-    color: #fff; /* Sets the text color to white */
-    padding: 0.75rem 0; /* Adds padding at the top and bottom */
-    backdrop-filter: blur(5px); /* Applies a blur effect to the background */
+    background-color: rgba(0, 0, 0, 0.1); 
+    color: #fff; 
+    padding: 0.75rem 0; 
+    backdrop-filter: blur(5px); 
 }
 
 /* Unordered list for genre navigation */
 .genre-nav ul {
-    list-style: none; /* Removes bullet points */
-    padding: 0; /* Resets default padding */
-    margin: 0; /* Resets default margin */
-    display: flex; /* Uses flexbox for layout */
-    justify-content: center; /* Horizontally aligns items */
-    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap; 
 }
 
 /* List items in the genre navigation */
 .genre-nav li {
-    margin: 0.5rem 1rem; /* Adds margin around each list item */
+    margin: 0.5rem 1rem; 
 }
 
 /* Links in the genre navigation */
 .genre-nav a {
-    color: #fff; /* Sets the text color to white */
-    text-decoration: none; /* Removes underlines */
-    padding: 0.75rem 1.25rem; /* Adds padding inside the link */
-    border-radius: 0.375rem; /* Rounds the corners */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Adds a smooth transition effect */
-    display: block; /* Makes the link a block-level element */
-    font-weight: 500; /* Sets a semi-bold font weight */
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Adds a text shadow */
+    color: #fff;
+    text-decoration: none; 
+    padding: 0.75rem 1.25rem; 
+    border-radius: 0.375rem; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    display: block; 
+    font-weight: 500; 
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); 
 }
 
 /* Hover effect for the genre navigation links */
 .genre-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.15); /* Lightens the background on hover */
-    color: #eee; /* Lightens the text color on hover */
+    background-color: rgba(255, 255, 255, 0.15); 
+    color: #eee; 
 }
 
 /* Style for the icons in the genre navigation */
 .genre-nav ul li a i {
-    margin-right: 5px; /* Adds some space to the right of the icon */
-    font-size: 1.4em; /* Sets the font size */
-    vertical-align: middle; /* Vertically aligns the icon with the text */
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); /* Adds a text shadow */
+    margin-right: 5px; 
+    font-size: 1.4em; 
+    vertical-align: middle;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); 
 }
 
 /* Container for the main content */
 .container {
-    max-width: 1200px; /* Sets a maximum width */
-    margin: 20px auto; /* Centers the container horizontally */
-    padding: 0 20px; /* Adds padding on the left and right */
-}
+    max-width: 1200px; 
+    margin: 20px auto; 
+    padding: 0 20px;
+} 
 
 /* Search card styles */
 .search-card {
-    background: rgba(255, 255, 255, 0.8); /* Sets a semi-transparent white background */
-    border-radius: 0.75rem; /* Rounds the corners */
-    padding: 2.5rem; /* Adds padding inside the card */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    margin-bottom: 2.5rem; /* Adds margin at the bottom */
-    backdrop-filter: blur(5px); /* Applies a blur effect to the background */
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 0.75rem; 
+    padding: 2.5rem; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.5rem; 
+    backdrop-filter: blur(5px); 
 }
 
 /* Title inside the search card */
 .search-card h2 {
-    font-size: 2.25rem; /* Sets the font size */
-    margin-bottom: 1.75rem; /* Adds margin at the bottom */
-    color: #2c3e50; /* Sets the text color to a dark grey */
-    text-align: center; /* Centers the text */
-    font-weight: 600; /* Sets a bold font weight */
+    font-size: 2.25rem; 
+    margin-bottom: 1.75rem; 
+    color: #2c3e50; 
+    text-align: center; 
+    font-weight: 600; 
 }
 
 /* Search controls container */
 .search-controls {
-    display: flex; /* Uses flexbox for layout */
-    gap: 1.25rem; /* Adds spacing between items */
-    margin-bottom: 2rem; /* Adds margin at the bottom */
-    flex-wrap: wrap; /* Allows items to wrap to the next line */
-    align-items: center; /* Vertically aligns items */
+    display: flex; 
+    gap: 1.25rem; 
+    margin-bottom: 2rem; 
+    flex-wrap: wrap; 
+    align-items: center; 
 }
 
 /* Search input style */
 .search-input {
-    flex: 1; /* Allows the input to grow and take up available space */
-    min-width: 250px; /* Sets a minimum width */
-    height: 3rem; /* Sets the height */
-    padding: 0.75rem; /* Adds padding inside the input */
-    background-color: rgba(255, 255, 255, 0.7); /* Sets a semi-transparent white background */
-    border: 1px solid #ced4da; /* Adds a border */
-    border-radius: 0.5rem; /* Rounds the corners */
-    font-size: 1.1rem; /* Sets the font size */
-    transition: border-color 0.2s ease; /* Adds a smooth transition effect */
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Adds an inner shadow */
+    flex: 1; 
+    min-width: 250px;
+    height: 3rem; 
+    padding: 0.75rem; 
+    background-color: rgba(255, 255, 255, 0.7); 
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem; 
+    font-size: 1.1rem;
+    transition: border-color 0.2s ease; 
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); 
 }
 
 /* Focus state for the search input */
 input[type="text"]:focus {
-    border-color: #80bdff; /* Changes the border color on focus */
-    outline: 0; /* Removes the default outline */
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25), inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Adds a shadow on focus */
+    border-color: #80bdff; 
+    outline: 0; 
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25), inset 0 1px 3px rgba(0, 0, 0, 0.1); 
 }
 
 /* Button style */
 button {
-    padding: 1rem 2rem; /* Adds padding inside the button */
-    background-color: rgba(0, 123, 255, 0.7); /* Sets a semi-transparent blue background */
-    color: white; /* Sets the text color to white */
-    border: none; /* Removes the border */
-    border-radius: 0.5rem; /* Rounds the corners */
-    cursor: pointer; /* Changes the cursor to a pointer on hover */
-    font-size: 1.1rem; /* Sets the font size */
-    transition: background-color 0.2s ease; /* Adds a smooth transition effect */
-    display: flex; /* Uses flexbox for layout */
-    align-items: center; /* Vertically aligns items */
-    gap: 0.75rem; /* Adds spacing between items */
-    font-weight: 500; /* Sets a semi-bold font weight */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    padding: 1rem 2rem; 
+    background-color: rgba(0, 123, 255, 0.7); 
+    color: white; 
+    border: none; 
+    border-radius: 0.5rem; 
+    cursor: pointer;
+    font-size: 1.1rem; 
+    transition: background-color 0.2s ease; 
+    display: flex; 
+    align-items: center; 
+    gap: 0.75rem; 
+    font-weight: 500; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 /* Hover effect for the button */
 button:hover {
-    background-color: rgba(0, 86, 179, 0.7); /* Darkens the background on hover */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Increases the shadow on hover */
+    background-color: rgba(0, 86, 179, 0.7); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
 /* Movie grid styles */
@@ -212,42 +212,41 @@ button:hover {
 
 /* Movie card styles */
 .movie-card {
-    background: rgba(255, 255, 255, 0.8); /* Sets a semi-transparent white background */
-    border-radius: 0.75rem; /* Rounds the corners */
-    padding: 2rem; /* Adds padding inside the card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Adds a smooth transition effect */
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 0.75rem; 
+    padding: 2rem; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
     backdrop-filter: blur(5px);
-    /* Apply a blur effect to the background */
 }
 
 /* Hover effect for the movie card */
 .movie-card:hover {
-    transform: translateY(-7px); /* Moves the card up slightly on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increases the shadow on hover */
+    transform: translateY(-7px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 }
 
 /* Poster container style */
 .poster-container {
-    position: relative; /* Establishes a positioning context for child elements */
-    width: 100%; /* Takes up the full width of the container */
-    height: 400px; /* Sets a fixed height */
-    background-color: #e9ecef; /* Sets a light grey background */
-    border-radius: 0.5rem; /* Rounds the corners */
-    margin-bottom: 1.25rem; /* Adds margin at the bottom */
-    display: flex; /* Uses flexbox for layout */
-    align-items: center; /* Vertically aligns items */
-    justify-content: center; /* Horizontally aligns items */
-    overflow: hidden; /* Hides any overflowing content */
+    position: relative; 
+    width: 100%; 
+    height: 400px; 
+    background-color: #e9ecef; 
+    border-radius: 0.5rem; 
+    margin-bottom: 1.25rem; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden; 
 }
 
 /* Movie poster style */
 .movie-poster {
-    width: 100%; /* Takes up the full width of the container */
-    height: 100%; /* Takes up the full height of the container */
-    object-fit: cover; /* Ensures the image covers the entire container */
-    border-radius: 0.5rem; /* Rounds the corners */
-    transition: opacity 0.3s ease; /* Adds a smooth transition effect */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 0.5rem;
+    transition: opacity 0.3s ease; 
 }
 
 /* Hide posters before they load */
@@ -257,16 +256,16 @@ button:hover {
 
 /* Fallback poster style */
 .fallback-poster {
-    width: 100%; /* Takes up the full width of the container */
-    height: 100%; /* Takes up the full height of the container */
-    display: flex; /* Uses flexbox for layout */
-    align-items: center; /* Vertically aligns items */
-    justify-content: center; /* Horizontally aligns items */
-    background-color: #f8f9fa; /* Sets a light grey background */
-    color: #6c757d; /* Sets the text color to a medium grey */
-    text-align: center; /* Centers the text */
-    padding: 1.25rem; /* Adds padding inside the container */
-    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    width: 100%; 
+    height: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: #f8f9fa; 
+    color: #6c757d; 
+    text-align: center; 
+    padding: 1.25rem;
+    box-sizing: border-box;
 }
 
 /* Loading indicator style */
@@ -279,33 +278,33 @@ button:hover {
 
 /* Error message style */
 .error {
-    background-color: #ffebee; /* Sets a light red background */
-    color: #d32f2f; /* Sets the text color to a dark red */
-    padding: 1.25rem; /* Adds padding inside the container */
-    border-radius: 0.5rem; /* Rounds the corners */
-    margin-bottom: 2rem; /* Adds margin at the bottom */
-    display: none; /* Hides the error message by default */
+    background-color: #ffebee; 
+    color: #d32f2f; 
+    padding: 1.25rem; 
+    border-radius: 0.5rem; 
+    margin-bottom: 2rem; 
+    display: none; 
 }
 
 /* Spinner animation */
 .spinner {
-    width: 50px; /* Sets the width */
-    height: 50px; /* Sets the height */
-    border: 5px solid #f3f3f3; /* Adds a border */
-    border-top: 5px solid #3498db; /* Sets the color of the top border */
-    border-radius: 50%; /* Makes it a circle */
-    animation: spin 1s linear infinite; /* Applies the spin animation */
-    margin: 1.25rem auto; /* Centers the spinner horizontally */
+    width: 50px; 
+    height: 50px; 
+    border: 5px solid #f3f3f3; 
+    border-top: 5px solid #3498db; 
+    border-radius: 50%; 
+    animation: spin 1s linear infinite;
+    margin: 1.25rem auto; 
 }
 
 /* Keyframes for the spin animation */
 @keyframes spin {
     0% {
-        transform: rotate(0deg); /* Starts at 0 degrees */
+        transform: rotate(0deg); 
     }
 
     100% {
-        transform: rotate(360deg); /* Ends at 360 degrees */
+        transform: rotate(360deg);
     }
 }
 
@@ -329,37 +328,37 @@ button:hover {
 
 /* No results message style */
 .no-results {
-    text-align: center; /* Centers the text */
-    padding: 2.5rem; /* Adds padding inside the container */
-    background: #fff; /* Sets a white background */
-    border-radius: 0.75rem; /* Rounds the corners */
-    grid-column: 1 / -1; /* Makes it span all columns */
-    font-size: 1.25rem; /* Sets the font size */
-    color: #555; /* Sets the text color to a medium grey */
+    text-align: center; 
+    padding: 2.5rem; 
+    background: #fff; 
+    border-radius: 0.75rem; 
+    grid-column: 1 / -1;
+    font-size: 1.25rem; 
+    color: #555; 
 }
 
 /* Footer style */
 footer {
-    text-align: center; /* Centers the text */
-    padding: 1.25rem 0; /* Adds padding at the top and bottom */
-    background-color: rgba(0, 0, 0, 0.4); /* Sets a semi-transparent black background */
-    color: #fff; /* Sets the text color to white */
-    font-size: 0.9rem; /* Sets the font size */
+    text-align: center; 
+    padding: 1.25rem 0; 
+    background-color: rgba(0, 0, 0, 0.4); 
+    color: #fff; 
+    font-size: 0.9rem; 
 }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .movie-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusts the grid columns */
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     }
 
     .search-controls {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: stretch; /* Stretch items to fill the container */
+        flex-direction: column; 
+        align-items: stretch; 
     }
 
     .search-input {
-        min-width: auto; /* Allow the input to take up the full width */
+        min-width: auto; 
     }
 }
 

@@ -13,20 +13,18 @@ async function initialize() {
     try {
         // Fetch all available genres from the API
         allGenres = await getGenres();
-        console.log("All Genres Initialized:", allGenres); //Log the genres
-        // Populate the genre navigation with the fetched genres
+        console.log("All Genres Initialized:", allGenres); 
         populateGenreNav(allGenres);
     } catch (error) {
         // Handle errors during initialization, such as failing to load genres
         console.error("Error during initialization:", error);
         showError("Failed to load genres.");
-        return; // Exit if genres fail to load
+        return;
     }
 
     // Get the genre list element from the DOM
     const genreList = document.getElementById('genreList');
     if (genreList) {
-        // Attach a click event listener to the genre list
         genreList.addEventListener('click', handleGenreClick);
         console.log("Event listener attached to genreList"); // Confirmation
     } else {
@@ -39,9 +37,7 @@ async function initialize() {
  * Searches for movies based on the movie title entered in the search input.
  */
 async function searchMovies() {
-    // Get the movie title from the input field
     const movieTitle = document.getElementById('movieTitle').value.trim();
-    // Get the loading, error, and movie grid elements from the DOM
     const loadingElement = document.getElementById('loading');
     const errorElement = document.getElementById('error');
     const movieGrid = document.getElementById('movieGrid');
@@ -56,12 +52,9 @@ async function searchMovies() {
     try {
         // Fetch movies from OMDB based on the movie title
         const movies = await fetchMoviesFromOMDB(movieTitle);
-        // Display the fetched movies in the movie grid
         displayMovies(movies);
-        // Scroll to the movie grid to show the search results
         scrollToMovieGrid();
     } catch (error) {
-        // Display an error message if the movie search fails
         showError(error.message);
     } finally {
         // Hide the loading indicator after the search is complete
@@ -74,30 +67,22 @@ async function searchMovies() {
  * @param {string} genreId - The ID of the genre to search for.
  */
 async function searchMoviesByGenre(genreId) {
-    // Get the loading, error, and movie grid elements from the DOM
     const loadingElement = document.getElementById('loading');
     const errorElement = document.getElementById('error');
     const movieGrid = document.getElementById('movieGrid');
 
-    // Display the loading indicator
     loadingElement.style.display = 'block';
-    // Hide the error message
     errorElement.style.display = 'none';
-    // Clear the movie grid
     movieGrid.innerHTML = '';
 
     try {
         // Fetch movies from TMDB based on the genre ID
         const movies = await fetchMoviesFromTMDB(genreId);
-        // Display the fetched movies in the movie grid
         displayMoviesFromTMDB(movies);
-        // Scroll to the movie grid to show the search results
         scrollToMovieGrid();
     } catch (error) {
-        // Display an error message if the movie search fails
         showError(error.message);
     } finally {
-        // Hide the loading indicator after the search is complete
         loadingElement.style.display = 'none';
     }
 }
@@ -107,9 +92,7 @@ async function searchMoviesByGenre(genreId) {
  * @param {Array<Object>} genres - An array of genre objects.
  */
 function populateGenreNav(genres) {
-    // Get the genre list element from the DOM
     const genreList = document.getElementById('genreList');
-    // Clear the genre list
     genreList.innerHTML = '';
 
     // Iterate over each genre and create a list item for it
@@ -151,11 +134,8 @@ function populateGenreNav(genres) {
 
         // Set the inner HTML of the link to include the genre icon and name
         link.innerHTML = `<i class="${iconClass}"></i> ${genre.name}`;
-        // Store the genre ID as a data attribute on the link
         link.dataset.genre = genre.id;
-        // Append the link to the list item
         listItem.appendChild(link);
-        // Append the list item to the genre list
         genreList.appendChild(listItem);
     });
 }
@@ -190,9 +170,7 @@ function handleImageError(img, title) {
  * @param {Array<Object>} movies - An array of movie objects from OMDB.
  */
 function displayMovies(movies) {
-    // Get the movie grid element from the DOM
     const movieGrid = document.getElementById('movieGrid');
-    // Clear the movie grid
     movieGrid.innerHTML = '';
 
     // Display a "no results" message if no movies are found
@@ -240,9 +218,7 @@ function displayMovies(movies) {
  * @param {Array<Object>} movies - An array of movie objects from TMDB.
  */
 function displayMoviesFromTMDB(movies) {
-    // Get the movie grid element from the DOM
     const movieGrid = document.getElementById('movieGrid');
-    // Clear the movie grid
     movieGrid.innerHTML = '';
 
     // Display a "no results" message if no movies are found
@@ -292,11 +268,8 @@ function displayMoviesFromTMDB(movies) {
  * @param {string} message - The error message to display.
  */
 function showError(message) {
-    // Get the error element from the DOM
     const errorElement = document.getElementById('error');
-    // Set the text content of the error element to the error message
     errorElement.textContent = message;
-    // Display the error element
     errorElement.style.display = 'block';
 }
 
@@ -311,13 +284,10 @@ function handleGenreClick(event) {
         // Prevent the default link behavior
         event.preventDefault();
 
-        // Get the genre ID from the data attribute of the link
         const genreId = event.target.dataset.genre;
         console.log("Genre ID:", genreId);
-        // Clear the movie title input field
         document.getElementById('movieTitle').value = '';
 
-        // Search for movies by genre
         searchMoviesByGenre(genreId);
     }
 }
@@ -327,11 +297,8 @@ function handleGenreClick(event) {
  * @param {Event} event - The key press event object.
  */
 function handleEnter(event) {
-    // Check if the pressed key is "Enter"
     if (event.key === "Enter") {
-        // Prevent the default form submission behavior
         event.preventDefault();
-        // Initiate a movie search
         searchMovies();
     }
 }
@@ -340,9 +307,7 @@ function handleEnter(event) {
  * Scrolls the window to the movie grid element.
  */
 function scrollToMovieGrid() {
-    // Get the movie grid element from the DOM
     const movieGrid = document.getElementById('movieGrid');
-    // Scroll the movie grid into view with a smooth animation
     movieGrid.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
